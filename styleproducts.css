@@ -1,0 +1,398 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    width: 100%;
+    height: 91px;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 1;
+    font-family: Gabriola;
+    box-shadow: 3px 3px 3px #e7e5e5;
+}
+
+#navbar{
+    width: 80%;
+    height: 100%;
+    margin:auto;
+}
+
+#menu_ul{
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 2vw;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 1;
+}
+
+#menu_ul>li:nth-child(9){
+    display: none;
+    font-size: 3vw;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.active{
+    border-bottom: 1px solid  #A40D30; 
+}
+#icon{
+     width:15%; 
+    display: flex;
+    justify-content: space-around;
+}
+#icon>a{
+    font-size: 2vw;
+}
+
+#links{
+    width: 43%;
+    height: 10vh;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#maindiv{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#aside{
+    width: 25%;
+    height: 100%;
+}
+
+#grund{
+    width: 65%;
+    height:70rem;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+input[type="range"] { 
+    margin: auto;
+    appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 8px;
+    width: 80%;
+    cursor: pointer;
+    border-radius: 0; /* iOS */
+}
+
+::-webkit-slider-runnable-track {
+    background: #ddd;
+}
+
+/*
+ * 1. Set to 0 width and remove border for a slider without a thumb
+ * 2. Shadow is negative the full width of the input and has a spread 
+ *    of the width of the input.
+ */
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0px; /* 1 */
+    height: 0px;
+    background: #EBC8CC;
+    box-shadow: -200px 0 0 200px #A40D30; /* 2 */
+}
+
+::-moz-range-track {
+    height: 40px;
+    background: #EBC8CC;
+}
+
+::-moz-range-thumb {
+    background: #EBC8CC;
+    height: 40px;
+    width: 20px;
+    border: 3px solid #999;
+    border-radius: 0 !important;
+    box-shadow: -200px 0 0 200px  #A40D30;
+    box-sizing: border-box;
+}
+
+::-ms-fill-lower { 
+    background: #EBC8CC;
+}
+
+::-ms-thumb { 
+    background: #EBC8CC;
+    border: 2px solid #999;
+    height: 40px;
+    width: 20px;
+    box-sizing: border-box;
+}
+
+::-ms-ticks-after { 
+    display: none; 
+}
+
+::-ms-ticks-before { 
+    display: none; 
+}
+
+::-ms-track { 
+    background: #EBC8CC;
+    color: transparent;
+    height: 40px;
+    border: none;
+}
+
+::-ms-tooltip { 
+    display: none;
+}
+  
+
+ input[type="number"]{
+    width: 45%;
+    height: 30px;
+    border: 1px solid #8B8A88;
+
+ }
+ 
+    .slidediv{
+        width: 15.875em;
+        float: left;
+    } 
+.mecdiv{
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.nkardiv{
+    width: 45%;
+    height: 80%;
+    z-index: 22;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infodiv{
+    width: 45%;
+    height: 80%;
+    z-index: 22;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.infodiv{
+    display: flex;
+flex-direction: column;
+}
+.flexdiv{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+.infoul{
+    width: 45%;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: .7rem;
+}
+.infoul>li{
+    margin-top: 1rem;
+}
+.gindiv{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.zeghjdiv{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.btn{
+    width: 20%;
+    height: 6%;
+    border:none;
+    color: white;
+    background-color: #A40D30;
+}
+.descdiv{
+    width: 100%;
+    height: 50%;
+}
+#swipe{
+    display: none;
+    width: 100%;
+    height: 35rem;
+}
+footer{
+    width: 100%;
+    height: 30rem;
+    background-image: url("https://s3-alpha-sig.figma.com/img/e6de/b5e3/943cbb830ae546ca607172cea05ec64e?Expires=1675641600&Signature=XmQKaAc5pacjSDE7hGCjiL3Qp0Px6TxR0541rrY3x3jo-l5dZR1uVOT5kHjwb9xxNCjRHMzqEBkBe71mTaE5O34kw7Z~ALrQGv~M~bqnpyE91s7B3OjnI3E-z2OBfAddbU1XOFjLMbZfFrAfVlNPaOzHQ0aiiS7UlxtIq9UWOuizX4fjVU~uDBrcqj0T6U5rdSJxGamgRFVjWyvGs5A5j0-6~gy1urEwOUIwo~mtl2sqJN-oig2qpgGJ06xaPE82Bj1VfibgpnER69-6XPDVW9XkSPlfxYPYnEdTZ39yTpmS8Ikk0RjIGQ~pj~1bRrGFoUz6xYTsZF31RZwjZv7UQA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+#menu_mob{
+    display: none;
+}
+#lastdiv{
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    color: white;
+    display:flex ;
+    justify-content: space-around;
+  }
+
+  .popularwines_caption{
+    width: 24vw;
+    height: 2px;
+    background-color: grey;
+}
+#armenianbrands{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    font-family: Gabriola;
+}
+
+@media only screen and (max-width: 1200px) {
+    #grund{
+        height: 110rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       }
+    .slidediv{
+        transform: scale(80%);
+    }
+   .ps{
+    font-size: 0.95rem;
+   }
+  } 
+
+  @media only screen and (max-width: 850px) {
+    .mecdiv{
+        height: 70rem;
+    }
+    #grund{
+        height: 120rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       }
+   .ps{
+    font-size: 0.8rem;
+   }
+   .slidediv{
+    transform: scale(70%);
+}
+  } 
+  
+  
+  @media only screen and (max-width: 800px) {
+    #grund{
+        height:200rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       }
+   .ps{
+    font-size: 0.8rem;
+   }
+   
+  } 
+
+
+  @media only screen and (max-width: 695px) {
+    #grund{
+        height: 200rem;
+        display: block;
+       }
+    .ps{
+        font-size: 0.7rem;
+       }
+      #links{
+        font-size:14px ;
+      } 
+
+  } 
+  @media only screen and (max-width: 600px) {
+    #menu_ul>li{
+        display:none ;
+    }
+    #menu_ul>li:nth-child(1){
+        display: inline;
+        font-size: 3rem;
+    }
+    #menu_ul>li:nth-child(8){
+        display: block;
+        font-size: 3vw;
+    }
+    #menu_ul>li:nth-child(9){
+        display: block;
+        font-size: 3vw;
+    }
+    #icon>a{
+        font-size: 3vw;
+    }
+    footer div{
+        display: none;
+    }
+    #menu_mob{
+        display:flex;
+        list-style: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 24px;
+    }#menu_mob>li{
+        padding: 15px 0;
+        border-bottom: solid 1px;
+    }
+    #menu_mob>li:hover{
+       background-color: #ddd;
+    }
+    #menu_mob>li:nth-child(1){
+        border-top: solid 1px;
+    }
+    #menu_mob>li>a{
+        color: white;
+    }
+}
+  @media only screen and (max-width: 400px) {
+   #grund{
+    height: 200rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+    .ps{
+        font-size: 0.5rem;
+     }
+     
+  } 

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Roboto:ital,wght@0,500;0,700;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styleproducts.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <ul id="menu_ul">
+                <li><a href="#">Brands</a></li>
+                <li><a href="#" class="active">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Special Offers</a></li>
+                <li><a href="#">BzB Offers</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li id="icon">
+                    <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-shopping-cart"  aria-hidden="true" id="cart"></i></a>
+                </li>
+              <li>
+                <a href="products.html#menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
+              </li>  
+            </ul>
+        </nav>
+    </header>
+
+    <div id="links">
+        <span><a href="#">Home</a>></span><span><a href="#">Products</a></span><span>><a href="#" style="color:#A40D30">Red wine</a></span>
+    </div>
+
+    <div id="maindiv">
+        <div id="aside">
+            <h2>Price</h2>
+            <p><input type="range"  id="rrr" ></p>
+            <p style="width:80%; display: flex; justify-content: space-between;">
+                <span id="lowestprice"></span> <span id="nowestprice"></span> <span id="highestprice"></span>
+            </p>
+            <p style="width:80%; display: flex; justify-content: space-between;">
+                <input type="number" placeholder="from" oninput="changeprice()" value="3" id="from"/> 
+                <input type="number" placeholder="to"  oninput="changeprice()" value="999" id="to"/>
+            </p>
+            <h2>Type</h2>
+            <p style="margin: 0; width: 50%; display: flex; justify-content: space-around;">
+            <input  type="checkbox" oninput="looktypedry()" id="drycheck"> <span style="width: 50%;">Dry</span>
+        </p>
+        <p style="margin: 0; width: 50%; display: flex; justify-content: space-around;">
+            <input  type="checkbox" oninput="looktypefruit()" id="fruitcheck"> <span style="width: 50%;">Fruit</span>
+        </p>
+        <p style="margin: 0; width: 50%; display: flex; justify-content: space-around;">
+            <input  type="checkbox" oninput="looktypesemisweet()" id="semisweetcheck"> <span style="width: 52%;">Semi Sweet</span>
+        </p>
+        <p style="margin: 0; width: 50%; display: flex; justify-content: space-around;">
+            <input  type="checkbox"  oninput="looktypesweet()" id="sweetcheck"> <span style="width: 50%;">Sweet</span>
+        </p>
+
+        <h2>Brands</h2>
+            <p style="margin: 0; width: 50%; display: flex; justify-content: space-around;">
+            <input  type="checkbox" id="vedi" oninput="lookvedi()"> <span style="width: 50%;">Vedi Alco</span>
+        </p>
+        <p style="margin: 0; width: 50%; display: flex; justify-content: space-around;">
+            <input  type="checkbox" id="karas" oninput="lookkaras()"> <span style="width: 50%;">Karas</span>
+        </p>
+        <p style="margin: 0; width: 50%; display: flex; justify-content: space-around;">
+            <input  type="checkbox" id="zorah" oninput="lookzorah()"> <span style="width: 52%;">Zorah</span>
+        </p>
+        <p style="margin: 0; width: 
+        70%; display: flex; justify-content: space-around;">
+            <input  type="checkbox" id="armwin" oninput="lookarmwin()"> <span style="width: 65%;">Armenia wines</span>
+        </p>
+        <p style="margin: 0; width: 50%; display: flex; justify-content: space-around;">
+            <input  type="checkbox" id="tushpa" oninput="looktushpa()"> <span style="width: 50%;">Tushpa</span>
+        </p>
+        <p style="margin: 0; width: 50%; display: flex; justify-content: space-around;">
+            <input  type="checkbox" id="areni" oninput="lookareni()"> <span style="width: 50%;">Areni</span>
+        </p>
+        <p style="margin: 0; width: 50%; display: flex; justify-content: space-around;">
+            <input  type="checkbox" id="koor" oninput="lookkoor()"> <span style="width: 50%;">Koor</span>
+        </p>
+        </div>
+        <div id="grund">
+
+        </div>
+    </div>
+   <div  id="swipe" >
+    <div id="coorporations">
+        <div id="armenianbrands">
+            <div class="popularwines_caption"></div>
+            <h2 style="font-size: 3vw; color: #A40D30; ">Similar wines</h2>
+            <div class="popularwines_caption"></div>
+        </div>       
+    </div>
+    <!-- Swiper -->
+ <div class="swiper">
+    <div class="swiper-wrapper" id="s">
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+   </div>
+
+   <footer>
+    <a name="menu"></a>
+    <div style="height: 90%; width:100% ;display: flex; justify-content: space-around; align-items: center;">
+        <div>
+           <h2>FAQ</h2>
+           <p  class="ps">
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in iaculis urna. Sed ultrices convallis magna in scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis rhoncus sollicitudin urna, eu maximus nisl ultrices eu. Fusce eleifend nisi eget justo sagittis fringilla. Nullam vel leo nec est laoreet sollicitudin.
+           </p>
+       </div> 
+       <div>
+           <h2>About </h2>
+           <p  class="ps">
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in iaculis urna. Sed ultrices convallis magna in scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis rhoncus sollicitudin urna, eu maximus nisl ultrices eu. Fusce eleifend nisi eget justo sagittis fringilla. Nullam vel leo nec est laoreet sollicitudin.
+           </p>
+       </div>
+       <div>
+           <h2>Customers </h2>
+           <p  class="ps">
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in iaculis urna. Sed ultrices convallis magna in scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis rhoncus sollicitudin urna, eu maximus nisl ultrices eu. Fusce eleifend nisi eget justo sagittis fringilla. Nullam vel leo nec est laoreet sollicitudin.
+           </p>
+       </div>
+       <div>
+           <h2>Contacts</h2>
+           <p  class="ps">
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in iaculis urna. Sed ultrices convallis magna in scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis rhoncus sollicitudin urna, eu maximus nisl ultrices eu. Fusce eleifend nisi eget justo sagittis fringilla. Nullam vel leo nec est laoreet sollicitudin.
+           </p>
+       </div>
+       <ul id="menu_mob">
+        <li><a  href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Special Offers</a></li>
+        <li><a href="#">BzB Offers</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Contact us</a></li>
+        </ul>
+    </div>
+
+       <div id="lastdiv">
+        <span>All rights reserved</span>
+        <span>Developed by webex Texhnologies</span>
+        </div>
+        
+   </footer>
+
+    <script src="appproducts.js"></script>
+
+ <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+ <!-- Initialize Swiper -->
+ <script>
+   var swiper = new Swiper('.swiper', {
+     slidesPerView: 4,
+     direction: getDirection(),
+     navigation: {
+       nextEl: '.swiper-button-next',
+       prevEl: '.swiper-button-prev',
+     },
+     on: {
+       resize: function () {
+         swiper.changeDirection(getDirection());
+       },
+     },
+   });
+
+   function getDirection() {
+     var windowWidth = window.innerWidth;
+     var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+     return direction;
+   }
+ </script>
+
+</body>
+</html>
